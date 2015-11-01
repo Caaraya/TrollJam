@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Troll Jamm</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_song_selection">SongSelection</string>
+    <string name="title_activity_play_game">PlayGame</string>
+    <string name="title_activity_end_game">EndGameActivity</string>
+    <string name="AppName">Troll Jamm</string>
+
+</resources>

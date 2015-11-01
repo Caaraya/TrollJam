@@ -1,0 +1,91 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <TextView
+        android:id="@+id/christina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/DanceApp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="29dp"
+        android:text="By : Christina Araya" />
+
+    <TextView
+        android:id="@+id/getJammin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="54dp"
+        android:text="Get Jammin"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="48sp"/>
+
+    <Button
+        android:id="@+id/open_menu"
+        style="@style/button_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/getJammin"
+        android:layout_alignRight="@+id/getJammin"
+        android:layout_below="@+id/getJammin"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/blue_button"
+        android:onClick="onClickOpenMenu"
+        android:text="Open menu" />
+
+  <Button
+      android:id="@+id/choose_song"
+      style="@style/button_text"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignLeft="@+id/getJammin"
+      android:layout_alignRight="@+id/getJammin"
+      android:layout_below="@+id/open_menu"
+      android:layout_marginTop="16dp"
+      android:background="@drawable/blue_button"
+      android:clickable="false"
+      android:onClick="onClickAddSong"
+      android:text="Play Song From Folder"
+      android:textSize="18sp"
+      android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/DanceApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/choose_song"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:text="Dance App" />
+
+    <RatingBar
+        android:id="@+id/difficulty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:isIndicator="false"
+        android:numStars="3"
+        android:stepSize="1" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/christina"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/beat1" />
+
+    <TextView
+        android:id="@+id/setDifficulty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/difficulty"
+        android:layout_centerHorizontal="true"
+        android:text="Set Difficulty" />
+
+</RelativeLayout>

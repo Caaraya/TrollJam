@@ -1,0 +1,165 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:launchMode="singleTop"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <TextView
+        android:id="@+id/gameResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/song"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="60dp"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <ImageView
+        android:id="@+id/leftArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/downArrow"
+        android:scaleType="fitCenter"
+        android:src="@drawable/left_arrow"
+        android:visibility="invisible" />
+    
+
+    <ImageView
+        android:id="@+id/downArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/gameResult"
+        android:layout_alignParentRight="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/down_arrow"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/upArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/rightArrow"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/leftArrow"
+        android:scaleType="fitCenter"
+        android:src="@drawable/up_arrow"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/rightArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/right_arrow"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/showMoves"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/gameResult"
+        android:layout_alignRight="@+id/gameResult" 
+        android:layout_alignEnd="@+id/gameResult" />
+    <ImageView
+        android:id="@+id/showYourMoves"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/gameResult"
+        android:layout_alignLeft="@+id/gameResult" 
+        android:layout_alignStart="@+id/gameResult" />
+
+    <ImageView
+        android:id="@+id/beat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
+
+    <TextView
+        android:id="@+id/song_by"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="artist"
+        android:textColor="#b2bc20"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/song"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="18dp"
+        android:text="song"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/downMove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/downArrow"
+        android:layout_toLeftOf="@+id/downArrow"
+        android:scaleType="fitCenter"
+        android:src="@drawable/move_arrow_down"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/rightMove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rightArrow"
+        android:layout_toLeftOf="@+id/rightArrow"
+        android:scaleType="fitCenter"
+        android:src="@drawable/move_right_arrow"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/leftMove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/leftArrow"
+        android:layout_toRightOf="@+id/leftArrow"
+        android:scaleType="fitCenter"
+        android:src="@drawable/move_left_arrow"
+        android:visibility="invisible" />
+    
+    <ImageView
+        android:id="@+id/upMove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/upArrow"
+        android:layout_toRightOf="@+id/upArrow"
+        android:scaleType="fitCenter"
+        android:src="@drawable/move_up_arrow"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/songList"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/blue_button"
+        android:onClick="toSongList"
+        android:text="song list" />
+
+    <Button
+        android:id="@+id/main"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/blue_button"
+        android:onClick="toMainMenu"
+        android:text="main menu" />
+
+</RelativeLayout>
